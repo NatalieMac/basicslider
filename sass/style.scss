@@ -1,0 +1,236 @@
+/*
+Theme Name: Basic Slider
+Theme URI: http://purplepen.com/wcsd/basicslider
+Author: Natalie MacLees
+Author URI: http://nataliemac.com
+Description: Basic theme incorporating the Basic Slider jQuery plugin
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Elements ------------------------------------------------------------------------------------ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+body {
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  margin: 0 auto;
+  max-width: 40em;
+  width: 95%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Coda', cursive;
+}
+
+a {
+  color: #23297A;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+/* /Elements ----------------------------------------------------------------------------------- */
+
+/* Header -------------------------------------------------------------------------------------- */
+
+.site-title {
+  margin-top: 2em;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.site-description {
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2em;
+}
+
+/* /Header ------------------------------------------------------------------------------------- */
+
+/* Footer -------------------------------------------------------------------------------------- */
+
+footer {
+  clear: both;
+  margin: 3em auto;
+  text-align: center;
+}
+
+/* /Footer ------------------------------------------------------------------------------------- */
+
+/* Slideshow ----------------------------------------------------------------------------------- */
+
+#slideshow {
+  padding-bottom: 3em;
+}
+
+ul.bjqs {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  li {
+    margin: 2em 0;
+    position: relative;
+  }
+  li.bjqs-slide {
+    display: none;
+    margin: 0;
+    position: absolute;
+  }
+}
+
+ul.bjqs-controls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 9999;
+}
+
+ul.bjqs-controls.v-centered li a {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  display: block;
+  padding: 1em;
+  position: absolute;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a {
+  right: 0;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-prev a {
+  left: 0;
+}
+
+ol.bjqs-markers {
+  list-style: none;
+  margin: 1em 0 3em 0;
+  padding: 0;
+  width:100%;
+}
+
+ol.bjqs-markers.h-centered {
+  text-align: center;
+}
+
+ol.bjqs-markers li {
+  display: inline;
+}
+
+ol.bjqs-markers li a {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.4em 0.8em;
+  &:hover {
+    background: #666;
+    text-decoration: none;
+  }
+}
+
+ol.bjqs-markers li.active-marker a {
+  background: #999;
+}
+
+.slideshow-caption {
+  background: rgba(0,0,0,0.5);
+  bottom: 0;
+  display: block;
+  margin: 0;
+  padding: 0.5em 2%;
+  position: absolute;
+  width: 96%;
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* /Slideshow ---------------------------------------------------------------------------------- */
+
+/* Elastislide --------------------------------------------------------------------------------- */
+
+.elastislide-horizontal {
+  padding: 10px 37px;
+  border-radius: 10px/90px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset -2px 0 3px 2px rgba(255, 255, 255, 0.6),
+    inset 2px 0 3px 2px rgba(255, 255, 255, 0.6),
+    inset -10px 0 10px 1px rgba(155, 155, 155, 0.1),
+    inset 10px 0 10px 1px rgba(155, 155, 155, 0.1);
+}
+
+.elastislide-wrapper:before,
+.elastislide-wrapper:after{
+  content: '';
+  position: absolute;
+  z-index: -2;
+  bottom: 15px;
+  left:  20px;
+  width: 50%;
+  height: 20%;
+  border-radius: 10px/90px;
+  box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.elastislide-wrapper:after {
+  right: 20px;
+  left: auto;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+
+/* /Elastislide -------------------------------------------------------------------------------- */
+
+/* Article ------------------------------------------------------------------------------------- */
+/* /Article ------------------------------------------------------------------------------------ */
+
+/* Media Queries ------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 46em) {
+  body {
+    font-size: 1.6em;
+  }
+}
+
+/* /Media Queries ------------------------------------------------------------------------------ */
